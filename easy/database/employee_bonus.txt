@@ -1,0 +1,10 @@
+-- Write your PostgreSQL query statement below
+SELECT
+    name
+    , bonus
+FROM Employee
+LEFT JOIN Bonus on Bonus.empId = Employee.empId
+WHERE
+    Bonus.bonus < 1000
+    OR
+    Bonus.empId IS NULL
